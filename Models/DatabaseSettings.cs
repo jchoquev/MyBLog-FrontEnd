@@ -6,5 +6,5 @@ public class DBSettings
 
     public string? DatabaseName { get; set; }
 
-    public string? BooksCollectionName { get; set; }
+    public List<string> CollectionNames { get; set; }=null!;
 }

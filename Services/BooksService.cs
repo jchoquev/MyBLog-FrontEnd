@@ -18,8 +18,7 @@ public class BooksService
         var mongoDatabase = mongoClient.GetDatabase(
             bookStoreDatabaseSettings.Value.DatabaseName);
 
-        _booksCollection = mongoDatabase.GetCollection<Book>(
-            bookStoreDatabaseSettings.Value.BooksCollectionName);
+        _booksCollection = mongoDatabase.GetCollection<Book>("Libro");
     }
 
     public async Task<List<Book>> GetAsync() =>
